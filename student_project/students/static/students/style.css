@@ -63,6 +63,20 @@ header p {
   transform: scale(1.05);
 }
 
+.view-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 9px 14px;
+  background-color: #2563eb;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.view-button:hover {
+  background-color: #1d4ed8;
+}
+
 /* Student Detail Styles */
 
 .student-detail {

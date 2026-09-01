@@ -1,19 +1,48 @@
+:root {
+  /* Colors */
+  --color-primary: #12388a;
+  --color-primary-hover: #304a93;
+  --color-background: #f4f6f8;
+  --color-white: #ffffff;
+  --color-text: #222222;
+  --color-text-light: #555555;
+
+  /* Shadows */
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-card-hover: 0 4px 10px rgba(0, 0, 0, 0.09);
+
+  /* Spacing */
+  --spacing-xs: 10px;
+  --spacing-sm: 14px;
+  --spacing-md: 20px;
+  --spacing-lg: 25px;
+  --spacing-xl: 30px;
+  --spacing-xxl: 40px;
+
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+
+  /* Transitions */
+  --transition-default: 0.2s;
+}
+
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f6f8;
+  background-color: var(--color-background);
   margin: 0;
-  color: #222;
+  color: var(--color-text);
 }
 
 header {
-  background-color: #2563eb;
-  color: white;
+  background-color: var(--color-primary);
+  color: var(--color-white);
   text-align: center;
-  padding: 40px 20px;
+  padding: var(--spacing-xxl) var(--spacing-md);
 }
 
 header h1 {
-  margin: 0 0 10px;
+  margin: 0 0 var(--spacing-xs);
 }
 
 header p {
@@ -22,60 +51,62 @@ header p {
 
 .container {
   max-width: 1100px;
-  margin: 40px auto;
-  padding: 0 20px;
+  margin: var(--spacing-xxl) auto;
+  padding: 0 var(--spacing-md);
 }
 
 .container > h2 {
-  margin-bottom: 25px;
+  margin-bottom: var(--spacing-lg);
 }
 
 .student-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: var(--spacing-md);
 }
 
 .student {
-  background-color: white;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s, box-shadow 0.2s;
+  background-color: var(--color-white);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  transition:
+    transform var(--transition-default),
+    box-shadow var(--transition-default);
 }
 
 .student h3 {
   margin-top: 0;
-  color: #2563eb;
+  color: var(--color-primary);
 }
 
 .student p {
-  margin: 10px 0;
-  color: #555;
+  margin: var(--spacing-xs) 0;
+  color: var(--color-text-light);
 }
 
 .student strong {
-  color: #222;
+  color: var(--color-text);
 }
 
 .student:hover {
-  border: 0.5px dashed #2563eb;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.09);
+  border: 0.5px dashed var(--color-primary);
+  box-shadow: var(--shadow-card-hover);
   transform: scale(1.02);
 }
 
 .view-button {
   display: inline-block;
-  margin-top: 10px;
-  padding: 9px 14px;
-  background-color: #2563eb;
-  color: white;
+  margin-top: var(--spacing-xs);
+  padding: 9px var(--spacing-sm);
+  background-color: var(--color-primary);
+  color: var(--color-white);
   text-decoration: none;
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
 }
 
 .view-button:hover {
-  background-color: #1d4ed8;
+  background-color: var(--color-primary-hover);
 }
 
 /* Student Detail Styles */
@@ -83,36 +114,47 @@ header p {
 .student-detail {
   max-width: 600px;
   margin: 0 auto;
-  background-color: white;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  background-color: var(--color-white);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
 }
 
 .student-detail h2 {
   margin-top: 0;
-  color: #2563eb;
+  color: var(--color-primary);
 }
 
 .student-detail p {
   margin: 15px 0;
-  color: #555;
+  color: var(--color-text-light);
 }
 
 .student-detail strong {
-  color: #222;
+  color: var(--color-text);
 }
 
 .back-button {
   display: inline-block;
-  margin-top: 20px;
-  padding: 10px 16px;
-  background-color: #2563eb;
-  color: white;
+  margin-top: var(--spacing-md);
+  padding: var(--spacing-xs) 16px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
   text-decoration: none;
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
 }
 
 .back-button:hover {
-  background-color: #1d4ed8;
+  background-color: var(--color-primary-hover);
+}
+
+.home-image {
+  display: block;
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  object-fit: cover;
+  margin: 0 auto var(--spacing-xl);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
 }

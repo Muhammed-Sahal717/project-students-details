@@ -60,7 +60,7 @@ header p {
 .student:hover {
   border: 0.5px dashed #2563eb;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.09);
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 .view-button {

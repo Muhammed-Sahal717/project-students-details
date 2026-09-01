@@ -34,7 +34,7 @@ Create and activate a virtual environment:
 python -m venv .venv
 ```
 
-#### Linux/MacOS:
+#### Linux / MacOS:
 
 ```bash
 source .venv/bin/activate

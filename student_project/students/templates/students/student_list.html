@@ -55,6 +55,10 @@
             <strong>Address:</strong>
             {{ student.address }}
           </p>
+
+          <a href="{% url 'student_detail' student.id %}" class="view-button">
+            View Details
+          </a>
         </div>
 
         {% empty %}

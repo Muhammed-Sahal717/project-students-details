@@ -15,3 +15,6 @@ def student_detail(request, id):
     return render(request, 'students/student_detail.html', {
         'student': student
     })
+
+def home(request):
+    return render(request, 'students/home.html')

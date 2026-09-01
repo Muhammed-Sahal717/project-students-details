@@ -1,0 +1,35 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Student Management System</title>
+
+    <link rel="stylesheet" href="{% static 'students/style.css' %}" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Student Management System</h1>
+      <p>Manage and view student information</p>
+    </header>
+
+    <main class="container">
+      <div class="home-card">
+        <h2>Welcome</h2>
+
+        <p>
+          View student information and details using our student management
+          system.
+        </p>
+
+        <a href="{% url 'student_list' %}" class="view-button">
+          View Students
+        </a>
+      </div>
+    </main>
+  </body>
+</html>

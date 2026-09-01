@@ -9,6 +9,7 @@ class Student(models.Model):
     email = models.EmailField()
     phone = models.CharField(max_length=15)
     address = models.TextField()
+    image = models.ImageField(upload_to='students/' , blank=True, null=True)
 
     def __str__(self):
         return self.name

@@ -19,6 +19,13 @@
 
     <main class="container">
       <div class="student-detail">
+        {% if student.image %}
+        <img
+          src="{{ student.image.url }}"
+          alt="{{ student.name }}"
+          class="student-image"
+        />
+        {% endif %}
         <h2>{{ student.name }}</h2>
 
         <p>

@@ -158,3 +158,12 @@ header p {
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-card);
 }
+
+.student-image {
+  display: block;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin: 0 auto var(--spacing-md);
+  border-radius: 50%;
+}

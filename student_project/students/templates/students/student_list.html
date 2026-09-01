@@ -24,36 +24,19 @@
         {% for student in students %}
 
         <div class="student">
+          {% if student.image %}
+          <img
+            src="{{ student.image.url }}"
+            alt="{{ student.name }}"
+            class="student-image"
+          />
+          {% endif %}
+
           <h3>{{ student.name }}</h3>
 
           <p>
             <strong>Roll Number:</strong>
             {{ student.roll_number }}
-          </p>
-
-          <p>
-            <strong>Age:</strong>
-            {{ student.age }}
-          </p>
-
-          <p>
-            <strong>Course:</strong>
-            {{ student.course }}
-          </p>
-
-          <p>
-            <strong>Email:</strong>
-            {{ student.email }}
-          </p>
-
-          <p>
-            <strong>Phone:</strong>
-            {{ student.phone }}
-          </p>
-
-          <p>
-            <strong>Address:</strong>
-            {{ student.address }}
           </p>
 
           <a href="{% url 'student_detail' student.id %}" class="view-button">

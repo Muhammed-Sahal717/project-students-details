@@ -62,3 +62,42 @@ header p {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.09);
   transform: scale(1.05);
 }
+
+/* Student Detail Styles */
+
+.student-detail {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.student-detail h2 {
+  margin-top: 0;
+  color: #2563eb;
+}
+
+.student-detail p {
+  margin: 15px 0;
+  color: #555;
+}
+
+.student-detail strong {
+  color: #222;
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 16px;
+  background-color: #2563eb;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.back-button:hover {
+  background-color: #1d4ed8;
+}

@@ -1,0 +1,60 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>{{ student.name }} - Student Details</title>
+
+    <link rel="stylesheet" href="{% static 'students/style.css' %}" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Student Details</h1>
+      <p>Complete information about the student</p>
+    </header>
+
+    <main class="container">
+      <div class="student-detail">
+        <h2>{{ student.name }}</h2>
+
+        <p>
+          <strong>Roll Number:</strong>
+          {{ student.roll_number }}
+        </p>
+
+        <p>
+          <strong>Age:</strong>
+          {{ student.age }}
+        </p>
+
+        <p>
+          <strong>Course:</strong>
+          {{ student.course }}
+        </p>
+
+        <p>
+          <strong>Email:</strong>
+          {{ student.email }}
+        </p>
+
+        <p>
+          <strong>Phone:</strong>
+          {{ student.phone }}
+        </p>
+
+        <p>
+          <strong>Address:</strong>
+          {{ student.address }}
+        </p>
+
+        <a href="{% url 'student_list' %}" class="back-button">
+          ← Back to Students
+        </a>
+      </div>
+    </main>
+  </body>
+</html>

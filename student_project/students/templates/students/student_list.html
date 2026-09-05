@@ -12,9 +12,23 @@
   </head>
 
   <body>
-    <header>
-      <h1>Student Details</h1>
-      <p>Student information management system</p>
+    <header style="display: flex; justify-content: space-between; align-items: center; padding: 20px;">
+      <div>
+        <h1>Student Details</h1>
+        <p>Student information management system</p>
+      </div>
+      <div>
+        {% if user.is_authenticated %}
+          <span>Hello, {{ user.username }}!</span>
+          <form action="{% url 'logout' %}" method="post" style="display:inline; margin-left: 10px;">
+            {% csrf_token %}
+            <button type="submit" style="padding: 5px 10px; background-color: white; color: #f44336; border: 1px solid #f44336; cursor: pointer;">Logout</button>
+          </form>
+        {% else %}
+          <a href="{% url 'login' %}" style="color: white; margin-right: 10px;">Login</a>
+          <a href="{% url 'register' %}" style="color: white;">Register</a>
+        {% endif %}
+      </div>
     </header>
 
     <main class="container">

@@ -1,0 +1,48 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register - Student Management</title>
+    <link rel="stylesheet" href="{% static 'students/style.css' %}" />
+  </head>
+  <body>
+    <header>
+      <h1>Student Management System</h1>
+      <p>Create a new account</p>
+    </header>
+    <main class="container">
+      <div class="student-detail">
+        <h2>Register</h2>
+        <form method="post">
+          {% csrf_token %}
+          {% for field in form %}
+            <div class="form-group">
+              {{ field.label_tag }}
+              {{ field }}
+              {% if field.help_text %}
+                <span class="helptext">{{ field.help_text|safe }}</span>
+              {% endif %}
+              {% for error in field.errors %}
+                <p class="errorlist">{{ error }}</p>
+              {% endfor %}
+            </div>
+          {% endfor %}
+          
+          {% if form.non_field_errors %}
+            <div class="errorlist">
+              {% for error in form.non_field_errors %}
+                <p>{{ error }}</p>
+              {% endfor %}
+            </div>
+          {% endif %}
+          
+          <button type="submit" class="view-button" style="border:none; cursor:pointer; font-size:16px;">Sign Up</button>
+        </form>
+        <p style="margin-top: 20px;">Already have an account? <a href="{% url 'login' %}" style="color: var(--color-primary); font-weight:bold; text-decoration:none;">Log in here</a></p>
+        <p><a href="{% url 'home' %}" style="color: var(--color-text-light); text-decoration:none;">&larr; Back to Home</a></p>
+      </div>
+    </main>
+  </body>
+</html>

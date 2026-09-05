@@ -167,3 +167,53 @@ header p {
   margin: 0 auto var(--spacing-md);
   border-radius: 50%;
 }
+
+/* Form Styles */
+.form-group {
+  margin-bottom: var(--spacing-md);
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--color-text);
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: var(--radius-sm);
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  border-color: var(--color-primary);
+  outline: none;
+}
+
+.helptext {
+  font-size: 12px;
+  color: var(--color-text-light);
+  display: block;
+  margin-top: 5px;
+}
+
+.errorlist {
+  color: #f44336;
+  font-size: 14px;
+  list-style: none;
+  padding: 0;
+  margin: 5px 0 0 0;
+}
+
+.home-card {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: var(--color-white);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  text-align: center;
+}

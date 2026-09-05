@@ -34,6 +34,19 @@
         <a href="{% url 'student_list' %}" class="view-button">
           View Students
         </a>
+
+        <div style="margin-top: 20px;">
+          {% if user.is_authenticated %}
+            <p>Welcome, {{ user.username }}!</p>
+            <form action="{% url 'logout' %}" method="post" style="display:inline;">
+              {% csrf_token %}
+              <button type="submit" class="view-button" style="background-color: #f44336; border: none; cursor: pointer;">Logout</button>
+            </form>
+          {% else %}
+            <a href="{% url 'login' %}" class="view-button" style="background-color: #4CAF50;">Login</a>
+            <a href="{% url 'register' %}" class="view-button" style="background-color: #2196F3;">Register</a>
+          {% endif %}
+        </div>
       </div>
     </main>
   </body>
